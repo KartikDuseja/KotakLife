@@ -198,6 +198,6 @@ app.post('/aadhar',upload.single('sampleFile'),(req,res)=>{
 
 app.listen(port,()=>
 {
-console.log('Listening on port 5000');
+console.log('Listening on port ' + port);
 })
 

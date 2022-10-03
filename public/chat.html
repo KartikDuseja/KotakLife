@@ -895,7 +895,7 @@ if (true){
 	
     }
 else{
-         alert("Unable to get the feed from camera.");
+         console.log("Unable to get feed ")
     }
 }
 
@@ -942,7 +942,7 @@ function handlesuccess(stream){
 									
 								}
 							}).fail(function (response) {
-								alert('Error : ' + response.error);
+								console.log("Error from face recognition ajax call")
 							})
 			 }
 
@@ -1110,7 +1110,7 @@ function display_reply(obj){
    { // Five conditions api call
 	   console.log("Chat ended")
 
-	 location.href = 'localhost:5000/thankyou.html'
+	 //location.href = 'localhost:5000/thankyou.html'
    }
 
     if (obj["message"] == "record_cough"){
@@ -1330,7 +1330,7 @@ function sendMessage(message='') {
 		
 		   console.log("Redirecting to thank you page")
 	 	   console.log("Chat ended")
-           location.href = 'http://localhost:5000/thankyou.html'
+           location.href = '/thankyou.html'
 	   }
 		console.log("Data from line 1313" + data )
 	  $("#send").html('<i class="fa fa-paper-plane" aria-hidden="true"></i>');
