@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="wf-proximanova-n7-active wf-proximanova-i7-active wf-proximanova-n1-active wf-proximanova-n6-active wf-proximanova-i6-active wf-proximanova-n4-active wf-proximanova-i4-active wf-proximanova-n3-active wf-active"><head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<title>Health Evaluation</title>
+<!-- <link href="qa.css" rel="stylesheet"> -->
+<link rel="icon" href="https://insurance.zini.ai/zini.jpg'" type="image/x-icon"> 
+<link href="https://fonts.googleapis.com/css?family=McLaren&amp;display=swap" rel="stylesheet">  
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="https://use.typekit.net/hoy3lrg.js"></script>
+<script src="//apis.google.com/js/api.js?onload=loadApi"></script>   
+ <script src="//apis.google.com/js/client.js?onload=loadApi"></script>
+ <script src="//apis.google.com/js/platform.js"></script>
+ <script src="//apis.google.com/js/api.js"></script>
+ <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+<style type="text/css">.tk-proxima-nova{font-family:"proxima-nova",sans-serif;}</style><style type="text/css">@font-face{font-family:tk-proxima-nova-n7;src:url(https://use.typekit.net/af/7d485b/00000000000000003b9ad1b1/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/7d485b/00000000000000003b9ad1b1/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/7d485b/00000000000000003b9ad1b1/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-display:auto;}@font-face{font-family:tk-proxima-nova-i7;src:url(https://use.typekit.net/af/347aea/00000000000000003b9ad1b2/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/347aea/00000000000000003b9ad1b2/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/347aea/00000000000000003b9ad1b2/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;font-display:auto;}@font-face{font-family:tk-proxima-nova-n1;src:url(https://use.typekit.net/af/f6bc94/00000000000000003b9ad1bd/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3) format("woff2"),url(https://use.typekit.net/af/f6bc94/00000000000000003b9ad1bd/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3) format("woff"),url(https://use.typekit.net/af/f6bc94/00000000000000003b9ad1bd/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3) format("opentype");font-weight:100;font-style:normal;font-display:auto;}@font-face{font-family:tk-proxima-nova-n6;src:url(https://use.typekit.net/af/04b81b/00000000000000003b9ad1bb/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("woff2"),url(https://use.typekit.net/af/04b81b/00000000000000003b9ad1bb/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("woff"),url(https://use.typekit.net/af/04b81b/00000000000000003b9ad1bb/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("opentype");font-weight:600;font-style:normal;font-display:auto;}@font-face{font-family:tk-proxima-nova-i6;src:url(https://use.typekit.net/af/83c55b/00000000000000003b9ad1bc/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) format("woff2"),url(https://use.typekit.net/af/83c55b/00000000000000003b9ad1bc/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) format("woff"),url(https://use.typekit.net/af/83c55b/00000000000000003b9ad1bc/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) format("opentype");font-weight:600;font-style:italic;font-display:auto;}@font-face{font-family:tk-proxima-nova-n4;src:url(https://use.typekit.net/af/c9cde8/00000000000000003b9ad1b9/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/c9cde8/00000000000000003b9ad1b9/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/c9cde8/00000000000000003b9ad1b9/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-display:auto;}@font-face{font-family:tk-proxima-nova-i4;src:url(https://use.typekit.net/af/4ba64f/00000000000000003b9ad1ba/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/4ba64f/00000000000000003b9ad1ba/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/4ba64f/00000000000000003b9ad1ba/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-display:auto;}@font-face{font-family:tk-proxima-nova-n3;src:url(https://use.typekit.net/af/3333ef/00000000000000003b9ad1b5/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/3333ef/00000000000000003b9ad1b5/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/3333ef/00000000000000003b9ad1b5/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;font-display:auto;}</style><script>try{Typekit.load({ async: true });}catch(e){}</script><style type="text/css">@font-face{font-family:proxima-nova;src:url(https://use.typekit.net/af/7d485b/00000000000000003b9ad1b1/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/7d485b/00000000000000003b9ad1b1/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/7d485b/00000000000000003b9ad1b1/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-display:auto;}@font-face{font-family:proxima-nova;src:url(https://use.typekit.net/af/347aea/00000000000000003b9ad1b2/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/347aea/00000000000000003b9ad1b2/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/347aea/00000000000000003b9ad1b2/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;font-display:auto;}@font-face{font-family:proxima-nova;src:url(https://use.typekit.net/af/f6bc94/00000000000000003b9ad1bd/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3) format("woff2"),url(https://use.typekit.net/af/f6bc94/00000000000000003b9ad1bd/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3) format("woff"),url(https://use.typekit.net/af/f6bc94/00000000000000003b9ad1bd/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3) format("opentype");font-weight:100;font-style:normal;font-display:auto;}@font-face{font-family:proxima-nova;src:url(https://use.typekit.net/af/04b81b/00000000000000003b9ad1bb/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("woff2"),url(https://use.typekit.net/af/04b81b/00000000000000003b9ad1bb/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("woff"),url(https://use.typekit.net/af/04b81b/00000000000000003b9ad1bb/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3) format("opentype");font-weight:600;font-style:normal;font-display:auto;}@font-face{font-family:proxima-nova;src:url(https://use.typekit.net/af/83c55b/00000000000000003b9ad1bc/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) format("woff2"),url(https://use.typekit.net/af/83c55b/00000000000000003b9ad1bc/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) format("woff"),url(https://use.typekit.net/af/83c55b/00000000000000003b9ad1bc/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3) format("opentype");font-weight:600;font-style:italic;font-display:auto;}@font-face{font-family:proxima-nova;src:url(https://use.typekit.net/af/c9cde8/00000000000000003b9ad1b9/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/c9cde8/00000000000000003b9ad1b9/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/c9cde8/00000000000000003b9ad1b9/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-display:auto;}@font-face{font-family:proxima-nova;src:url(https://use.typekit.net/af/4ba64f/00000000000000003b9ad1ba/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/4ba64f/00000000000000003b9ad1ba/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/4ba64f/00000000000000003b9ad1ba/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-display:auto;}@font-face{font-family:proxima-nova;src:url(https://use.typekit.net/af/3333ef/00000000000000003b9ad1b5/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/3333ef/00000000000000003b9ad1b5/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/3333ef/00000000000000003b9ad1b5/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;font-display:auto;}</style>
+
+
+
+
+</head>
+
+<!-- CSS -->
+<style>
+i{
+	
+	font-size: 10px;
+	color: white;
+}
+
+
+#frame .content .message-input .wrap img {
+  border: none;
+  width: 50px;
+  height: 38px;
+  cursor: default;
+  
+}
+
+.info{
+  background: #e6eaea !important;
+  float: right;
+  font-size: 1.0em;
+  margin: 0 0 5px 0 !important;
+  padding: 0 0 0 0 !important;
+}
+
+#messages{
+	
+	padding-top: 12px;
+	
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #27ae60;
+  font-family: "proxima-nova", "Source Sans Pro", sans-serif;
+  font-size: 1.5em;
+  letter-spacing: 0.1px;
+  color: #32465a;
+  text-rendering: optimizeLegibility;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  -webkit-font-smoothing: antialiased;
+}
+
+#frame {
+  width: 95%;
+  min-width: 360px;
+  max-width: 1000px;
+  height: 92vh;
+  min-height: 300px;
+  max-height: 720px;
+  background: #e6eaea;
+}
+@media screen and (max-width: 360px) {
+  #frame {
+    width: 100%;
+    height: 100vh;
+  }
+}
+#frame #sidepanel {
+  float: left;
+  min-width: 280px;
+  max-width: 340px;
+  width: 40%;
+  height: 100%;
+  background: #2c3e50;
+  color: #f5f5f5;
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel {
+    width: 58px;
+    min-width: 58px;
+  }
+}
+#frame #sidepanel #profile {
+  width: 80%;
+  margin: 25px auto;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile {
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px 0 0 0;
+    background: #32465a;
+  }
+}
+#frame #sidepanel #profile.expanded .wrap {
+  height: 210px;
+  line-height: initial;
+}
+#frame #sidepanel #profile.expanded .wrap p {
+  margin-top: 20px;
+}
+#frame #sidepanel #profile.expanded .wrap i.expand-button {
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+#frame #sidepanel #profile .wrap {
+  height: 60px;
+  line-height: 60px;
+  overflow: hidden;
+  -moz-transition: 0.3s height ease;
+  -o-transition: 0.3s height ease;
+  -webkit-transition: 0.3s height ease;
+  transition: 0.3s height ease;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap {
+    height: 55px;
+  }
+}
+#frame #sidepanel #profile .wrap img {
+  width: 50px;
+  border-radius: 50%;
+  padding: 3px;
+  border: 2px solid #e74c3c;
+  height: auto;
+  float: left;
+  cursor: pointer;
+  -moz-transition: 0.3s border ease;
+  -o-transition: 0.3s border ease;
+  -webkit-transition: 0.3s border ease;
+  transition: 0.3s border ease;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap img {
+    width: 40px;
+    margin-left: 4px;
+  }
+}
+#frame #sidepanel #profile .wrap img.online {
+  border: 2px solid #2ecc71;
+}
+#frame #sidepanel #profile .wrap img.away {
+  border: 2px solid #f1c40f;
+}
+#frame #sidepanel #profile .wrap img.busy {
+  border: 2px solid #e74c3c;
+}
+#frame #sidepanel #profile .wrap img.offline {
+  border: 2px solid #95a5a6;
+}
+#frame #sidepanel #profile .wrap p {
+  float: left;
+  margin-left: 15px;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap p {
+    display: none;
+  }
+}
+#frame #sidepanel #profile .wrap i.expand-button {
+  float: right;
+  margin-top: 23px;
+  font-size: 0.8em;
+  cursor: pointer;
+  color: #435f7a;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap i.expand-button {
+    display: none;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  width: 150px;
+  margin: 70px 0 0 0;
+  border-radius: 6px;
+  z-index: 99;
+  line-height: initial;
+  background: #435f7a;
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap #status-options {
+    width: 58px;
+    margin-top: 57px;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options.active {
+  opacity: 1;
+  visibility: visible;
+  margin: 75px 0 0 0;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap #status-options.active {
+    margin-top: 62px;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid #435f7a;
+  margin: -8px 0 0 24px;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap #status-options:before {
+    margin-left: 23px;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options ul {
+  overflow: hidden;
+  border-radius: 6px;
+}
+#frame #sidepanel #profile .wrap #status-options ul li {
+  padding: 15px 0 30px 18px;
+  display: block;
+  cursor: pointer;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap #status-options ul li {
+    padding: 15px 0 35px 22px;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options ul li:hover {
+  background: #496886;
+}
+#frame #sidepanel #profile .wrap #status-options ul li span.status-circle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px 0 0 0;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap #status-options ul li span.status-circle {
+    width: 14px;
+    height: 14px;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options ul li span.status-circle:before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  margin: -3px 0 0 -3px;
+  background: transparent;
+  border-radius: 50%;
+  z-index: 0;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap #status-options ul li span.status-circle:before {
+    height: 18px;
+    width: 18px;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options ul li p {
+  padding-left: 12px;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap #status-options ul li p {
+    display: none;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-online span.status-circle {
+  background: #2ecc71;
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-online.active span.status-circle:before {
+  border: 1px solid #2ecc71;
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-away span.status-circle {
+  background: #f1c40f;
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-away.active span.status-circle:before {
+  border: 1px solid #f1c40f;
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-busy span.status-circle {
+  background: #e74c3c;
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-busy.active span.status-circle:before {
+  border: 1px solid #e74c3c;
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-offline span.status-circle {
+  background: #95a5a6;
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-offline.active span.status-circle:before {
+  border: 1px solid #95a5a6;
+}
+#frame #sidepanel #profile .wrap #expanded {
+  padding: 100px 0 0 0;
+  display: block;
+  line-height: initial !important;
+}
+#frame #sidepanel #profile .wrap #expanded label {
+  float: left;
+  clear: both;
+  margin: 0 8px 5px 0;
+  padding: 5px 0;
+}
+#frame #sidepanel #profile .wrap #expanded input {
+  border: none;
+  margin-bottom: 6px;
+  background: #32465a;
+  border-radius: 3px;
+  color: #f5f5f5;
+  padding: 7px;
+  width: calc(100% - 43px);
+}
+#frame #sidepanel #profile .wrap #expanded input:focus {
+  outline: none;
+  background: #435f7a;
+}
+#frame #sidepanel #search {
+  border-top: 1px solid #32465a;
+  border-bottom: 1px solid #32465a;
+  font-weight: 300;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #search {
+    display: none;
+  }
+}
+#frame #sidepanel #search label {
+  position: absolute;
+  margin: 10px 0 0 20px;
+}
+#frame #sidepanel #search input {
+  font-family: "proxima-nova", "Source Sans Pro", sans-serif;
+  padding: 10px 0 10px 46px;
+  width: calc(100% - 25px);
+  border: none;
+  background: #32465a;
+  color: #f5f5f5;
+}
+#frame #sidepanel #search input:focus {
+  outline: none;
+  background: #435f7a;
+}
+#frame #sidepanel #search input::-webkit-input-placeholder {
+  color: #f5f5f5;
+}
+#frame #sidepanel #search input::-moz-placeholder {
+  color: #f5f5f5;
+}
+#frame #sidepanel #search input:-ms-input-placeholder {
+  color: #f5f5f5;
+}
+#frame #sidepanel #search input:-moz-placeholder {
+  color: #f5f5f5;
+}
+#frame #sidepanel #contacts {
+  height: calc(100% - 177px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #contacts {
+    height: calc(100% - 149px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  #frame #sidepanel #contacts::-webkit-scrollbar {
+    display: none;
+  }
+}
+#frame #sidepanel #contacts.expanded {
+  height: calc(100% - 334px);
+}
+#frame #sidepanel #contacts::-webkit-scrollbar {
+  width: 8px;
+  background: #2c3e50;
+}
+#frame #sidepanel #contacts::-webkit-scrollbar-thumb {
+  background-color: #243140;
+}
+#frame #sidepanel #contacts ul li.contact {
+  position: relative;
+  padding: 10px 0 15px 0;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #contacts ul li.contact {
+    padding: 6px 0 46px 8px;
+  }
+}
+#frame #sidepanel #contacts ul li.contact:hover {
+  background: #32465a;
+}
+#frame #sidepanel #contacts ul li.contact.active {
+  background: #32465a;
+  border-right: 5px solid #435f7a;
+}
+#frame #sidepanel #contacts ul li.contact.active span.contact-status {
+  border: 2px solid #32465a !important;
+}
+#frame #sidepanel #contacts ul li.contact .wrap {
+  width: 88%;
+  margin: 0 auto;
+  position: relative;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #contacts ul li.contact .wrap {
+    width: 100%;
+  }
+}
+#frame #sidepanel #contacts ul li.contact .wrap span {
+  position: absolute;
+  left: 0;
+  margin: -2px 0 0 -2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #2c3e50;
+  background: #95a5a6;
+}
+#frame #sidepanel #contacts ul li.contact .wrap span.online {
+  background: #2ecc71;
+}
+#frame #sidepanel #contacts ul li.contact .wrap span.away {
+  background: #f1c40f;
+}
+#frame #sidepanel #contacts ul li.contact .wrap span.busy {
+  background: #e74c3c;
+}
+#frame #sidepanel #contacts ul li.contact .wrap img {
+  width: 40px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 10px;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #contacts ul li.contact .wrap img {
+    margin-right: 0px;
+  }
+}
+#frame #sidepanel #contacts ul li.contact .wrap .meta {
+  padding: 5px 0 0 0;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #contacts ul li.contact .wrap .meta {
+    display: none;
+  }
+}
+#frame #sidepanel #contacts ul li.contact .wrap .meta .name {
+  font-weight: 600;
+}
+#frame #sidepanel #contacts ul li.contact .wrap .meta .preview {
+  margin: 5px 0 0 0;
+  padding: 0 0 1px;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -moz-transition: 1s all ease;
+  -o-transition: 1s all ease;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+#frame #sidepanel #contacts ul li.contact .wrap .meta .preview span {
+  position: initial;
+  border-radius: initial;
+  background: none;
+  border: none;
+  padding: 0 2px 0 0;
+  margin: 0 0 0 1px;
+  opacity: 0.5;
+}
+#frame #sidepanel #bottom-bar {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+#frame #sidepanel #bottom-bar button {
+  float: left;
+  border: none;
+  width: 50%;
+  padding: 10px 0;
+  background: #32465a;
+  color: #f5f5f5;
+  cursor: pointer;
+  font-size: 0.85em;
+  font-family: "proxima-nova", "Source Sans Pro", sans-serif;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #bottom-bar button {
+    float: none;
+    width: 100%;
+    padding: 15px 0;
+  }
+}
+#frame #sidepanel #bottom-bar button:focus {
+  outline: none;
+}
+#frame #sidepanel #bottom-bar button:nth-child(1) {
+  border-right: 1px solid #2c3e50;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #bottom-bar button:nth-child(1) {
+    border-right: none;
+    border-bottom: 1px solid #2c3e50;
+  }
+}
+#frame #sidepanel #bottom-bar button:hover {
+  background: #435f7a;
+}
+#frame #sidepanel #bottom-bar button i {
+  margin: 100px 100px 100px 100px;
+  
+  font-size: 1em;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #bottom-bar button i {
+    font-size: 1.3em;
+  }
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #bottom-bar button span {
+    display: none;
+  }
+}
+#frame .content {
+  float: right;
+  width: 100% !important;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (max-width: 735px) {
+  #frame .content {
+    width: calc(100% - 1px);
+    min-width: 300px !important;
+  }
+}
+@media screen and (min-width: 900px) {
+  #frame .content {
+    width: calc(100% - 20px);
+  }
+}
+#frame .content .contact-profile {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background: #f5f5f5;
+}
+
+
+#frame .content .contact-profile img {
+  width: 40px;
+  border-radius: 50%;
+  float: left;
+  margin: 9px 12px 0 9px;
+}
+#frame .content .contact-profile p {
+  float: left;
+}
+#frame .content .contact-profile .social-media {
+  float: right;
+}
+#frame .content .contact-profile .social-media i {
+  margin-left: 14px;
+  cursor: pointer;
+}
+#frame .content .contact-profile .social-media i:nth-last-child(1) {
+  margin-right: 20px;
+}
+#frame .content .contact-profile .social-media i:hover {
+  color: #435f7a;
+}
+#frame .content .messages {
+  height: auto;
+  
+  max-height: calc(100% - 93px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 735px) {
+  #frame .content .messages {
+    max-height: calc(100% - 105px);
+  }
+}
+#frame .content .messages::-webkit-scrollbar {
+  width: 8px;
+  background: rgba(0, 0, 0, 0);
+}
+#frame .content .messages::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#frame .content .messages ul li {
+  display: inline-block;
+  clear: both;
+  float : left;
+  margin: 0;
+  width: calc(100% - 25px);
+  font-size: 0.8em;
+}
+#frame .content .messages ul li:nth-last-child(1) {
+  margin-bottom: 20px;
+}
+#frame .content .messages ul li.sent img {
+  margin: 6px 8px 0 0;
+  width:30px;
+  height: 30px;
+  border-radius:50%;
+}
+#frame .content .messages ul li.sent p {
+  background: #435f7a;
+  color: #f5f5f5;
+}
+#frame .content .messages ul li.replies img {
+  float: right;
+  margin: 12px 0 0 8px;
+  width: 30px;
+  height: 30px;
+}
+
+
+
+#frame .content .messages ul li.replies p {
+  background: #f5f5f5;
+  float: right;
+  margin-top: 8px;
+}
+
+#frame .content .messages ul li.replies ul li.options p {
+  background: #9921a2;
+  float: right;
+  color: #ffffff;
+  margin: 3px !important;
+  cursor: pointer;
+  
+}
+
+
+#frame .content .messages ul li.replies  {
+    transition: width height 2s !important;
+}
+
+
+#frame .content .messages ul li.replies:focus {
+  width: 300px;
+  height: 300px;
+}
+
+
+
+#frame .content .messages ul li img {
+  width: 25px;
+  border-radius: 50%;
+  float: left;
+}
+#frame .content .messages ul li p {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 500px;
+  line-height: 130%;
+}
+@media screen and (min-width: 735px) {
+  #frame .content .messages ul li p {
+    max-width: 500px;
+  }
+}
+#frame .content .message-input {
+  position: absolute;
+  margin-left: 5px !important;
+  bottom: 0;
+  width: 100%;
+  z-index: 99;
+}
+#frame .content .message-input .wrap {
+  position: relative;
+}
+#frame .content .message-input .wrap input {
+  font-family: "proxima-nova", "Source Sans Pro", sans-serif;
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0 0 5px 0;
+  border: none;
+  width: calc(100% - 70px);
+  height: 38px;
+  padding: 12px 32px 12px 12px;
+  font-size: 0.8em;
+  color: #32465a;
+}
+
+#frame .content .message-input .wrap button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: none;
+  width: 50px;
+  height: 38px;
+  padding: 0 0 0 0;
+  margin: 12px 12px 5px 0;
+  cursor: pointer;
+  background: #32465a;
+  color: #f5f5f5;
+}
+
+
+@media screen and (max-width: 735px) {
+  #frame .content .message-input .wrap input {
+    padding: 15px 32px 16px 8px;
+  }
+}
+#frame .content .message-input .wrap input:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 735px) {
+  #frame .content .message-input .wrap .attachment {
+    margin-top: 17px;
+    right: 65px;
+  }
+}
+#frame .content .message-input .wrap .attachment:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 735px) {
+  #frame .content .message-input .wrap button {
+    padding: 16px 0;
+  }
+}
+#frame .content .message-input .wrap button:hover {
+  background: #435f7a;
+}
+#frame .content .message-input .wrap button:focus {
+  outline: none;
+}
+
+/*# sourceMappingURL=qa.css.map */
+
+</style>
+
+<body>
+
+
+
+<div center id="verification" style="position:absolute; top: 22px;left:8px; margin:5px; padding:5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<p center id="verification_status" style="color:#fff;font-size:18px;margin:2px"><strong></strong></p>
+<video id="video" height="350" width="500" playsinline autoplay></video> 
+</div>
+
+
+
+<div center id="none" style="margin:5px; padding:5px">
+<p center id="none" style="color:#fff;font-size:18px;margin:2px"><strong></strong></p>
+<video id="none" height="350" width="500" playsinline autoplay></video> 
+</div>
+
+
+
+
+
+<div id="frame" >
+    
+
+   
+	
+	<div class="content">
+	    <div >
+			  <div class="container-fluid" style="background: #2c3e50;" >
+				 <div  style="margin:3px;float:left">
+
+					 <a href="https://zini.ai"  class="brand-logo" ><span style="color:#fff;font-size:10px;margin:2px">Powered by </span><span style="color:#fff;font-size:25px;margin:2px"><strong>Zini</strong></span></a>
+				 </div >
+				 
+				 <div  style="margin:3px;float:right">
+					 <a href="https://zini.ai"  class="brand-logo"><span style="color:#fff;font-size:10px;margin:2px">Logged in </span><span style="color:#fff;font-size:25px;margin:2px"><strong></strong></span></a>
+					 <i class="fa fa-sign-out" aria-hidden="true"></i>
+					 
+				 </div >
+				 
+			  </div>
+		</div>
+		
+		<div class="messages" >
+			<ul id ="all_messages">
+			
+			
+				<!--<li class="replies">
+					<img src="http://zini.ai/images/logo/favicon.png" alt="">
+					<p>Hello, I'm gonna ask some questions and I request you to answer them carefully and honestly!</p>
+				</li>-->
+				
+				
+			</ul>
+		</div>
+		
+		
+		<div class="message-input">
+		    
+			
+			<div class="wrap">
+			<input type="text" placeholder="Write your message...">
+			<button id="send"  class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i> </button> 
+			<!-- <button id="send" class="submit"><img src="/assets/typing.gif" > </img> </button>  -->
+			
+			
+			
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<script>
+
+
+var flagvid = false ;
+
+
+
+
+const params = new Proxy(new URLSearchParams(window.location.search), {
+  get: (searchParams, prop) => searchParams.get(prop),
+});
+// Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+let uid = params.uuid;
+let full_name = params.name;
+
+console.log(uid)
+console.log(full_name)
+
+
+const video = document.getElementById("video");
+const canvas = document.createElement("canvas");
+const verification = document.getElementById("verification");
+const verification_status = document.getElementById("verification_status");
+verification.style.backgroundColor = "#2c3e50";
+canvas.height = 720; canvas.width=1280;
+var context = canvas.getContext('2d');
+const constraints = {
+		audio:false,
+		video: {
+		      width: 1280, height: 720
+		       }
+};
+
+
+
+
+
+
+var streamRecorder;
+var webcamstream;
+
+async function init(){
+if (true){
+	const stream = await navigator.mediaDevices.getUserMedia(constraints);
+	handlesuccess(stream);
+	
+    }
+else{
+         alert("Unable to get the feed from camera.");
+    }
+}
+
+
+
+
+
+
+function handlesuccess(stream){
+
+	window.stream = stream;
+	video.srcObject = stream;
+	webcamstream = stream;
+
+
+	const interval = setInterval(function() {
+		
+			 context.drawImage(video, 0,0 ,1280,720);
+			 canvas.toBlob(upload_to_server, 'image/jpeg');
+			
+			 
+
+			 function upload_to_server(blob){
+					 var data = new FormData();
+					 data.append('image', blob);
+					 data.append("uuid", uid );
+					 $.ajax({
+								type: 'POST',
+								url: "http://insurance.zini.ai/facerecognition/",
+								data: data,
+								processData: false,
+								contentType: false,
+								dataType: 'json',
+								success: function(data,status){
+									if (data["verified"] == true &&  data["liveness"] == true){
+									    verification.style.backgroundColor = "green";
+										verification_status.innerHTML = "<strong>Face verification successful.<br>Face skin: "+data["face_skin"]["status"]+"</strong>";
+									}
+									else{
+									    verification.style.backgroundColor = "red";
+										verification_status.innerHTML = "<strong>Face verification failed!</strong><br>Face skin: "+data["face_skin"]["status"]+"</strong>";
+									}
+									
+									
+								}
+							}).fail(function (response) {
+								alert('Error : ' + response.error);
+							})
+			 }
+
+    
+			 
+		}, 5000);
+
+	 //}, 5000);
+
+	 
+	 
+ 
+} // end function handlesuccess
+
+
+
+function onUploadSuccess() {
+        alert ('photo uploaded');
+    }
+
+    
+
+
+
+//calling init
+init();
+//var context = canvas.getContext('2d');
+
+
+var selectedOptions = [];
+var currentDepth = 50; // how much is the height of latest element in the all_messages ul
+
+var slideup = function(element, interval=200){
+    element.animate(
+	{
+    opacity: 1.0,
+    
+    
+	padding: "0"
+  }, interval,
+  function(){
+  // on animation complete
+    currentDepth = currentDepth + element.height();
+  	$(".messages").animate({ scrollTop: currentDepth }, "fast");
+           });
+     };
+
+
+
+
+
+$(".messages").animate({ scrollTop: $(document).height() }, "fast");
+
+$("#profile-img").click(function() {
+	$("#status-options").toggleClass("active");
+});
+
+$(".expand-button").click(function() {
+  $("#profile").toggleClass("expanded");
+	$("#contacts").toggleClass("expanded");
+});
+
+$("#status-options ul li").click(function() {
+	$("#profile-img").removeClass();
+	$("#status-online").removeClass("active");
+	$("#status-away").removeClass("active");
+	$("#status-busy").removeClass("active");
+	$("#status-offline").removeClass("active");
+	$(this).addClass("active");
+	
+	if($("#status-online").hasClass("active")) {
+		$("#profile-img").addClass("online");
+	} else if ($("#status-away").hasClass("active")) {
+		$("#profile-img").addClass("away");
+	} else if ($("#status-busy").hasClass("active")) {
+		$("#profile-img").addClass("busy");
+	} else if ($("#status-offline").hasClass("active")) {
+		$("#profile-img").addClass("offline");
+	} else {
+		$("#profile-img").removeClass();
+	};
+	
+	$("#status-options").removeClass("active");
+});
+
+function myMessage(message='') {
+    if (message==''){
+		message = $(".message-input input").val();
+	}
+	if($.trim(message) == '') {
+		return false;
+	}
+	var element = $('<li class="sent"> <p>' + message + '</p></li>')
+	element.css('padding-top', '5%');
+	element.css("opacity", "0.0");
+	element.appendTo(document.getElementById("all_messages"));
+	
+	slideup(element);
+	
+
+	
+};
+
+
+
+$('.submit').click(function() {
+  myMessage();
+  sendMessage();
+});
+
+$(window).on('keydown', function(e) {
+  if (e.which == 13) {
+    myMessage();
+	sendMessage();
+    return false;
+  }
+});
+
+
+
+function selectSingleOption(event){
+		var val = event.innerHTML;
+		myMessage(val);
+		event.style["background"] = "yellow";
+		event.style["color"] = "black";
+		sendMessage(message=val);
+};
+
+
+
+function selectMultiOption(event){
+		var val = event.innerHTML;
+		if (selectedOptions.includes(val)){
+			selectedOptions.pop(val);
+			event.style["background"] = "#9921a2";
+		    event.style["color"] = "white";
+			
+			return false;
+		}
+		selectedOptions.push(val);
+		event.style["background"] = "yellow";
+		event.style["color"] = "black";
+};
+
+
+function submitMultiOption(event){
+		if (selectedOptions.length == 0){
+			var message = "None of these"; 
+			sendMessage(message);
+		}
+		else{
+			var message = selectedOptions.join("__delimiter__");
+			var displayMessage = selectedOptions.join(", ");
+			sendMessage(message);
+			myMessage(displayMessage);
+		}
+		selectedOptions.length = 0; //delete all elements
+};
+
+
+
+function display_reply(obj){
+
+   if(obj["multiselect"] == -1)
+   { // Five conditions api call
+	   console.log("Chat ended")
+
+	 location.href = 'localhost:5000/thankyou.html'
+   }
+
+    if (obj["message"] == "record_cough"){
+	
+	      htmlcode = '<li class="replies"><div id="controls"><button type="button" class="btn btn-success btn-sm" id="recordButton">Record</button><button type="button" class="btn btn-warning btn-sm" id="pauseButton" disabled>Pause</button><button type="button" class="btn btn-danger btn-sm" id="stopButton" disabled>Stop</button></div><div id="formats">Press "Record" when ready.</div><ol id="recordingsList"></ol></li>'
+		  htmlcode = $(htmlcode);
+		  htmlcode.appendTo(document.getElementById("all_messages"));
+	      slideup(htmlcode);
+		  init_recording();
+		  return 0;
+	}
+	
+	
+	if (obj["message"] == "upload_skin_image"){
+	
+	
+	        
+			htmlcode = '<li class="replies"><label for="skin"><b>Please upload skin image</b></label><input required type="file" class="form-control" id="skin" name="skin" accept="image/png, image/jpeg" style="margin-bottom:10px;" required>   <button type="submit" class="btn btn-warning" id="skin_button"><strong>UPLOAD</strong></button></li><img id="skin_display" style="margin:5px; padding:5px;box-shadow: 0 4px 8px 0 rgba(0, 255, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.6);">'
+			htmlcode = $(htmlcode);
+			htmlcode.appendTo(document.getElementById("all_messages"));
+			slideup(htmlcode);
+			document.getElementById("skin_button").onclick = function(event){
+				event.stopPropagation(); // Stop stuff happening
+				event.preventDefault();
+				var fd = new FormData();
+				var file = $('#skin')[0].files[0];
+				fd.append('skin_image',file);
+				fd.append('uuid', uid );
+				predict_skin(fd);
+			
+        
+				};
+			
+			document.getElementById("skin").onchange = function(event) {
+										var image = document.getElementById('skin_display');
+										image.src = URL.createObjectURL(event.target.files[0]);
+										image.height="200"; image.width="200";
+									};
+			
+			return 0;
+	}
+	
+	
+	
+	if (obj["searchable"]){
+             
+			var options = obj["searchoptions"];
+			
+			
+			htmlcode = '<div class="row" style="padding:20px; "><p style="padding: 1px;margin:1px"><b>Search for your symptoms here:</b></p><select id="search_symptoms" class="search_symptoms  form-control" name="search_symptoms" multiple="multiple">';
+			
+			for (i=0; i<options.length ; i++) {
+						  
+							 
+								 htmlcode = htmlcode+ '<option value="' + options[i] + '">' + options[i] + '</option>';
+							 
+						  }
+			htmlcode = htmlcode + '</select></div>';
+			htmlcode = htmlcode + '<button type="submit" class="btn btn-warning" id="search_button"><strong>SUBMIT</strong></button>';
+			htmlcode = $(htmlcode);
+			htmlcode.appendTo(document.getElementById("all_messages"));
+			slideup(htmlcode);
+			
+			$("#search_button").click(function(){
+			            
+						var selected = $('#search_symptoms').val();
+				        $.ajax({
+								url: "http://insurance.zini.ai/",
+								type: 'post',
+								data: {
+									query: selected.join("__delimiter__"),
+									userid : uid 
+								},
+								headers: {
+									'Access-Control-Allow-Origin': "*"
+								},
+								success: function(data,status){
+									console.log("Data from ajax success"+ data)
+								  $("#send").html('<i class="fa fa-paper-plane" aria-hidden="true"></i>');
+								  var obj = JSON.parse(data);
+								  display_reply(obj);
+
+								}
+							});
+				     });
+			
+			
+			$(function()
+			{
+			  $(".search_symptoms").select2({
+			  
+			  placeholder: "Search/Select multiple symptoms",
+				allowClear: true,
+				});
+			});
+	
+	
+	    return 0;
+	}
+	
+	var element = '<li class="replies"><img src="https://insurance.zini.ai/zini.jpg" alt="ZINI" /><p>' + obj["message"] + '</p>';
+	
+	element = element+ '<ul style="padding:0px;">';
+	
+	if (obj["multiselect"] == true){
+			//element = element + '<li class="info"><p class="info">आप ऐक से ज़्यादा विकल्पो का चयन कर सक्ते हैं। चयन करने के बाद  "जमा करो" बटन को दबाइये। </p></li>';
+			element = element + '<li class="info"><p class="info">You can choose more than one options. Press "Submit" after selection.</p></li>';
+	}
+	var subtractor = 0;
+    if (obj["multiselect"] == true){
+	      subtractor = 1;
+	}
+	for (i=0; i<obj["options"].length ; i++){
+	        if (obj["multiselect"] == true){
+			element = element+  '<li class="options"  ><p onclick="selectMultiOption(this)">' + obj["options"][i] +'</p></li>';
+			}
+			else{
+			element = element+  '<li class="options"  ><p onclick="selectSingleOption(this)">' + obj["options"][i] +'</p></li>';
+			}
+	}
+	
+	if (obj["multiselect"] == true){
+		  //element = element+  '<li class="options" onclick="submitMultiOption()"><p style="background: #606060;">जमा करो</p></li>';
+		  element = element+  '<li class="options" onclick="submitMultiOption()"><p style="background: #606060;">SUBMIT</p></li>';
+	}
+
+	
+	
+	element = element + '</ul></li>';
+	element = $(element);
+	element.css('padding-top', '5%');
+	element.css("opacity", "0.0");
+	element.appendTo(document.getElementById("all_messages"));
+	slideup(element);
+	
+};
+
+
+
+
+var predict_skin = function(formdata){
+      //post request for prediction
+	  $("#send").html('<img src="https://insurance.zini.ai/typing.gif" ></img>');
+      $.ajax({
+        type: 'POST',
+        //url:  window.ml_console_tornado_backend+"/similar_images",
+		url: "http://insurance.zini.ai/analyze_skin/",
+        contentType: false,
+        processData: false,
+        data: formdata,
+        success : function(d){
+			var obj = JSON.parse(d);
+            display_reply(obj);
+			$("#send").html('<i class="fa fa-paper-plane" aria-hidden="true"></i>');
+        },
+        error: function(d){
+            console.log(d);
+        }
+           
+        
+    });
+
+
+
+    } // end post request
+
+
+
+$(document).ready(function(){
+				//display_reply({"message":"हेलो Yugal, मैं कुछ प्रश्न पूछने जा रही हूँ और मैं आपसे उनका सावधानीपूर्वक और ईमानदारी से उत्तर देने का अनुरोध करती हूँ! क्या हम शुरू कर सकते हैं?",
+				display_reply({"message": "Hello" + " " + full_name+ " "+ "I am going to ask you some questions. Please answer them carefully and honestly. Shall we begin?",
+				options:[],
+				"multiselect":false}, interval=400)
+				});
+
+
+function sendMessage(message='') {
+   if (message == ''){
+		message = $(".message-input input").val();
+   } 
+   
+   
+   $('.message-input input').val(null);
+	if($.trim(message) == '') {
+		return false;
+	}
+	$("#send").html('<img src="http://insurance.zini.ai/typing.gif" ></img>');
+	$.ajax({
+    url: "http://insurance.zini.ai/input/",
+    type: 'post',
+    data: {
+        query: message,
+		userid: uid 
+    },
+    headers: {
+        'Access-Control-Allow-Origin': "*"
+    },
+    success: function(data,status){
+       if(data=="messagemultiselect")
+	   { 	// Ajax for 5 conditions 
+		  $.ajax({
+             type:'POST' ,
+			 url:'http://insurance.zini.ai/get_five_conditions/',
+			 data: {
+				"data": uid 
+			 },
+			 success: function (data)
+			 {
+				console.log(data)
+			 }, 
+			 error: function(data)
+			 {
+				console.log("ERROR!!")
+			 }
+	      
+	})
+		
+		   console.log("Redirecting to thank you page")
+	 	   console.log("Chat ended")
+           location.href = 'http://localhost:5000/thankyou.html'
+	   }
+		console.log("Data from line 1313" + data )
+	  $("#send").html('<i class="fa fa-paper-plane" aria-hidden="true"></i>');
+	  var obj = JSON.parse(data);
+	  display_reply(obj);
+	 // speak_reply(obj);
+    }
+});
+};
+
+// some more global variables
+var gumStream;
+//stream from getUserMedia() 
+var rec;
+//Recorder.js object 
+var input;
+//MediaStreamAudioSourceNode we'll be recording 
+// shim for AudioContext when it's not avb. 
+var AudioContext = window.AudioContext || window.webkitAudioContext;
+var audioContext = new AudioContext;
+
+
+function init_recording(){
+
+		//webkitURL is deprecated but nevertheless 
+		
+		//new audio context to help us record 
+		var recordButton = document.getElementById("recordButton");
+		var stopButton = document.getElementById("stopButton");
+		var pauseButton = document.getElementById("pauseButton");
+		//add events to those 3 buttons 
+		recordButton.addEventListener("click", startRecording);
+		stopButton.addEventListener("click", stopRecording);
+		pauseButton.addEventListener("click", pauseRecording);
+}
+
+function startRecording() {
+        URL = window.URL || window.webkitURL;
+		
+
+		var constraints = {
+			audio: true ,
+			video: false
+		} 
+		/* Disable the record button until we get a success or fail from getUserMedia() */
+
+		recordButton.disabled = true;
+		stopButton.disabled = false;
+		pauseButton.disabled = false
+
+		/* We're using the standard promise based getUserMedia()
+
+		https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia */
+
+		navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
+			console.log("getUserMedia() success, stream created, initializing Recorder.js ..."); 
+			/* assign to gumStream for later use */
+			gumStream = stream;
+			/* use the stream */
+			input = audioContext.createMediaStreamSource(stream);
+			/* Create the Recorder object and configure to record mono sound (1 channel) Recording 2 channels will double the file size */
+			rec = new Recorder(input, {
+				numChannels: 1
+			}) 
+			//start the recording process 
+			console.log("starting recording");
+			rec.record()
+			console.log("Recording started");
+		}).catch(function(err) {
+		console.log(err);
+			//enable the record button if getUserMedia() fails 
+			recordButton.disabled = false;
+			stopButton.disabled = true;
+			pauseButton.disabled = true
+		});
+
+}
+
+
+
+function pauseRecording() {
+    console.log("pauseButton clicked rec.recording=", rec.recording);
+    if (rec.recording) {
+        //pause 
+        rec.stop();
+        pauseButton.innerHTML = "Resume";
+    } else {
+        //resume 
+        rec.record()
+        pauseButton.innerHTML = "Pause";
+    }
+}
+
+function stopRecording() {
+    console.log("stopButton clicked");
+    //disable the stop button, enable the record too allow for new recordings 
+    stopButton.disabled = true;
+    recordButton.disabled = false;
+    pauseButton.disabled = true;
+    //reset button just in case the recording is stopped while paused 
+    pauseButton.innerHTML = "Pause";
+    //tell the recorder to stop the recording 
+    rec.stop(); //stop microphone access 
+    gumStream.getAudioTracks()[0].stop();
+    //create the wav blob and pass it on to createDownloadLink 
+    rec.exportWAV(createDownloadLink);
+}
+
+
+function createDownloadLink(blob) {
+    var url = URL.createObjectURL(blob);
+    var au = document.createElement('audio');
+    var li = document.createElement('li');
+    var link = document.createElement('a');
+    //add controls to the <audio> element 
+    au.controls = true;
+    au.src = url;
+    //link the a element to the blob 
+    link.href = url;
+    link.download = new Date().toISOString() + '.wav';
+    link.innerHTML = link.download;
+	
+    //add the new audio and a elements to the li element 
+	linebr = document.createElement('br');
+	li.appendChild(linebr);
+    li.appendChild(au);
+	linebr = document.createElement('br');
+	li.appendChild(linebr);
+    li.appendChild(link);
+    //add the li element to the ordered list 
+	
+	var filename = new Date().toISOString();
+	//filename to send to server without extension 
+	//upload link 
+	linebr = document.createElement('br');
+	li.appendChild(linebr);
+	var upload = document.createElement('a');
+	upload.href = "#";
+	upload.innerHTML = "Upload";
+	upload.classList.add("btn", "btn-success");
+	upload.addEventListener("click", function(event) {
+		var xhr = new XMLHttpRequest();
+		xhr.onload = function(e) {
+			if (this.readyState === 4) {
+				console.log("Server returned: ", e.target.responseText);
+				var obj = JSON.parse(e.target.responseText);
+				display_reply(obj);
+				
+			}
+		};
+		var fd = new FormData();
+		fd.append('uuid', uid);
+		fd.append("audio_data", blob, filename);
+		xhr.open("POST", "http://insurance.zini.ai/analyze_cough/", true);
+		xhr.send(fd);
+	})
+	li.appendChild(document.createTextNode(" ")) //add a space in between
+	li.appendChild(upload) //add the upload link to li
+	
+    recordingsList.appendChild(li);
+}// end function createDownloadLink
+
+
+</script>
+
+
+
+</body>
+
+
+</html>

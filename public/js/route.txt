@@ -1,0 +1,152 @@
+ //Get for form data 
+app.get('/formData',(request,response)=>{
+  response.sendFile
+});
+
+//Post for form data 
+app.post('/formData',(request,response)=>{
+  //we check if the request is an AJAX one and if accepts JSON
+    if(request.xhr || request.accepts('json, html')==='json'){
+      console.log('Response sent back')
+      console.log(response.body)
+     
+     } else {
+      //Do something else by reloading the page
+     }
+  });
+
+
+  <form action ="/register" method="POST" id= "regform" encType="multipart/form-data"> 
+
+  <form action ="/aadhar" method="POST" encType="multipart/form-data">
+
+   <form action ="/image1" method="POST" encType="multipart/form-data">
+
+
+       // create Request object
+    var request = new sql.Request();
+       
+    // query to the database and get the records
+    request.query('select * from ZiniKotak', function (err, recordset) {
+        
+        if (err) console.log(err)
+
+        // send records as a response
+        console.log(recordset);
+        
+    });
+});
+
+
+
+app.post('/aadhar',(req,res)=>{
+  
+  let sampleFile;
+  let uploadPath;
+ 
+  
+  
+  if (!req.files || Object.keys(req.files).length === 0) {
+    return res.status(400).send('No files were uploaded.');
+  }
+
+  sampleFile = req.files.sampleFile;
+  uploadPath = __dirname + '/upload/' + sampleFile.name;
+
+
+  sampleFile.mv(uploadPath, function (err) {
+    if (err) return res.status(500).send(err);
+
+
+    var request = new sql.Request();
+       
+  // query to the database and get the records
+  request.query("insert into ZiniKotak (Age, image1url) values ('7', '"+sampleFile.name+"' )" , function (err, recordset) {
+      
+    if (!err) {
+      res.redirect('/');
+    } else {
+      console.log(err);
+    };
+
+})
+    
+    });
+
+  
+})
+
+
+app.post('/aadhar',upload.single('sampleFile'),(req,res)=>{
+
+
+  //To get query param value 
+ 
+  const params = new Proxy(new URLSearchParams(window.location.search), {
+  get: (searchParams, prop) => searchParams.get(prop),
+});
+// Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+let value = params.uuid;
+console.log(value)
+
+app.get("/", (req, res) => {
+     ...
+     .then(function (response) {
+        res.header("Access-Control-Allow-Origin", "http://localhost:5501"); // update to match the domain you will make the request from
+        res.send(response.data);
+      })
+     ...
+});
+
+
+const textInputField = document.querySelector("#text-input")
+const form = document.querySelector("#form")
+const utterThis = new SpeechSynthesisUtterance()
+const synth = window.speechSynthesis
+let ourText = ""
+
+const checkBrowserCompatibility = () => {
+  "speechSynthesis" in window
+    ? console.log("Web Speech API supported!")
+    : console.log("Web Speech API not supported :-(")
+}
+
+checkBrowserCompatibility()
+
+form.onsubmit = (event) => {
+  event.preventDefault()
+  ourText = textInputField.value
+  utterThis.text = ourText
+  synth.speak(utterThis)
+  textInputField.value = ""
+}
+
+
+
+ // Ajax post for ss saving 
+			//  function save_ss(blob)
+			//  {
+			// 	var ssdata = new FormData();
+			// 	ssdata.append('image1', blob);
+			// 	$.ajax({
+			// 		type:'POST',
+			// 		url:'/ssSave' ,
+			// 		data: ssdata,
+			// 		processData: false,
+			// 		contentType: false,
+			// 		encType: "multipart/form-data",
+			// 		success:function(data){
+			// 			console.log("ss going to server successfully")
+			// 		},
+			// 		error:function(data)
+			// 		{
+
+			// 		}
+
+
+
+
+			// 	})
+
+			
+			//  }
