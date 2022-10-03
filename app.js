@@ -184,17 +184,7 @@ app.post('/aadhar',upload.single('sampleFile'),(req,res)=>{
   })
  
 
-  // app.post('/ssSave',uploadss.single('image1'),(req,res)=>{
   
-  //   console.log(req.file)
-          
-  
-     
-  //   res.send({
-  //     'success': true
-  // })
-   
-  // })
 
 app.listen(port,()=>
 {
